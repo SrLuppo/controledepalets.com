@@ -2,9 +2,11 @@
 include_once "includes/header.php"
 ?>
 <div class="row">
-    <div class="col s12 m4 l4 teal lighten-5" style="margin-left: 10px;">
+
+    <!-- ENVIO DE PALLETS -->
+    <div class="col s12 m4 l4 teal lighten-5 index-box">
         <div class="row">
-            
+
             <!-- Titulo -->
             <div class="col s12 center">
                 <h5>Registrar Envio de Pallets</h5>
@@ -28,11 +30,11 @@ include_once "includes/header.php"
                         <label for="destino">Destino</label>
                     </div>
 
-                <!-- Pallets -->
+                    <!-- Pallets -->
                     <div class="input-field col s12">
                         <h5>Pallets</h5>
                     </div>
-                    
+
                     <div class="input-field col s5">
                         <i class="material-icons prefix">calendar_view_month</i>
                         <input type="number" id="pbr" name="pbr" class="autocomplete">
@@ -45,8 +47,8 @@ include_once "includes/header.php"
                         <label for="simples">Simples</label>
                     </div>
 
-                 <!-- Nota Fiscal e Placa do veículo -->
-                 <div class="input-field col s12">
+                    <!-- Nota Fiscal e Placa do veículo -->
+                    <div class="input-field col s12">
                         <h5>Nota Fiscal e Veículo</h5>
                     </div>
                     <div class="input-field col s5">
@@ -72,6 +74,23 @@ include_once "includes/header.php"
             </div>
         </div>
     </div>
+
+    <!-- Débito de filiais -->
+    <div class="col s12 m4 l4 teal lighten-5 index-box">
+    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    </div>
+
+    <!-- Débito de filiais -->
+    <div class="col s12 m4 l4 teal lighten-5 index-box">
+    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    </div>
+
 </div>
 <?php
 include_once "includes/footer.php"
