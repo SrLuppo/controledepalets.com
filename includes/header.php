@@ -21,6 +21,12 @@
         main {
         flex: 1 0 auto;
         }
+
+        .index-box {
+            border: #b2dfdb;
+            border-style: solid;
+            border-width: 10px;
+        }
     </style>
 </head>
 <body class="teal lighten-4">
