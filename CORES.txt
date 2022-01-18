@@ -1,0 +1,12 @@
+-- PALETA DE CORES ORDEM CRESCENTE
+#e0f2f1 teal lighten-5
+#b2dfdb teal lighten-4 ->BACKGROUND
+#80cbc4 teal lighten-3
+#4db6ac teal lighten-2 
+#26a69a teal lighten-1
+#009688 teal
+#00897b teal darken-1
+#00796b teal darken-2
+#00695c teal darken-3
+#004d40 teal darken-4  << mais escura
+
