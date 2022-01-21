@@ -24,13 +24,13 @@ include_once "includes/header.php";
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">home</i>
-                        <input readonly type="text" value="CWB" id="origem" name="origem" class="autocomplete">
+                        <input readonly type="text" value="CWB" id="origem" name="origem" maxlength="3" class="autocomplete">
                         <label for="origem">Origem</label>
                     </div>
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">moving</i>
-                        <input type="text" id="destino" name="destino" class="autocomplete">
+                        <input type="text" id="destino" name="destino" maxlength="3" required class="autocomplete">
                         <label for="destino">Destino</label>
                     </div>
 
@@ -57,7 +57,7 @@ include_once "includes/header.php";
                     </div>
                     <div class="input-field col s5">
                         <i class="material-icons prefix">local_shipping</i>
-                        <input type="text" id="placa" name="placa" maxlength="7" class="autocomplete">
+                        <input type="text" id="placa" name="placa" maxlength="7" required class="autocomplete">
                         <label for="placa">Veículo</label>
                     </div>
 
@@ -81,10 +81,7 @@ include_once "includes/header.php";
 
     <!-- Débito de filiais -->
     <div class="col s12 m4 l4 teal lighten-5 index-box">
-    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
-    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
-    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
-    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    
     </div>
 
     <!-- Débito de filiais -->

@@ -30,10 +30,10 @@ $data = date('Y-m-d H:i:s');
 
     if (mysqli_query($connect,$sql )):
         $_SESSION['menssagem'] = 'Adicionado com sucesso';
-       // header('Location: ../index.php');
+        header("Location: ../impressao.php?origem=$origem&destino=$destino&pbr=$pbr&simples=$simples&veiculo=$veiculo&nota=$nota&data=$data");
     else:
         $_SESSION['menssagem'] = 'Erro ao adicionar';
-       // header('Location: ../index.php');
+        header('Location: ../index.php');
         ECHO mysqlI_error($connect);
     endif; 
 
