@@ -1,5 +1,9 @@
 <?php
-include_once "includes/header.php"
+session_start();
+require_once 'db_connect.php' ;
+
+include_once "includes/header.php";
+
 ?>
 <div class="row">
 
@@ -16,7 +20,7 @@ include_once "includes/header.php"
             <div class="col s12 center">
 
                 <!-- formulario para envio do cadastro -->
-                <form action="" method="post">
+                <form action="php_actions/addRegister.php" method="post">
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">home</i>
@@ -93,5 +97,5 @@ include_once "includes/header.php"
 
 </div>
 <?php
-include_once "includes/footer.php"
+include_once "includes/footer.php";
 ?>
