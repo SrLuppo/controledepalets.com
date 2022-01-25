@@ -2,13 +2,13 @@
 session_start();
 require_once 'db_connect.php';
 
-//echo $_GET['origem'].'<br>';
-//echo $_GET['destino'].'<br>';
-//echo $_GET['pbr'].'<br>';
-//echo $_GET['simples'].'<br>';
-//echo $_GET['veiculo'].'<br>';
-//echo $_GET['nota'].'<br>';
-//echo $_GET['data'].'<br>';
+$origem =  $_GET['origem'] ?? '';
+$destino =  $_GET['destino'] ?? '';
+$pbr =  $_GET['pbr'] ?? 0 ;
+$simples =  $_GET['simples'] ?? 0 ;
+$veiculo =  $_GET['veiculo'] ?? '';
+$nota = $_GET['nota'] ?? '';
+$data =  $_GET['data'] ?? '';
 
 
 
@@ -49,7 +49,7 @@ require_once 'db_connect.php';
     </style>
 </head>
 
-<body>
+<body onload="imprimir()">
     <div class="row box">
 
         <div class="row">
@@ -57,23 +57,23 @@ require_once 'db_connect.php';
                 <img class="responsive-img" src="img/printTop.jpeg" alt="">
             </div>
         </div>
-        <div class="row center"style="margin-bottom: -20px;">
-            <div class="col s10 push-s1" >
-                <b>  COMUNICAÇÂO INTERNA</b>
+        <div class="row center" style="margin-bottom: -20px;">
+            <div class="col s10 push-s1">
+                <b> COMUNICAÇÂO INTERNA</b>
             </div>
             <div class="col s2 red-text">
-               <b>Nº: XXXXXXXX</b> 
+                <b>Nº: XXXXXXXX</b>
             </div>
         </div>
         <div class="col s12 push-s1">
-            DE: XXXX
+            DE: <?php echo $origem; ?>
         </div>
         <div class="col s12 push-s1">
-            PARA: XXXX
+            PARA: <?php echo $destino; ?>
             <hr>
         </div>
-        <div class="col s12 push-s1" style="margin-top: 20px;">
-            Segue no carro XXXXXXX os paletes descriminados abaixo para posterior devolução:
+        <div class="col s12 " style="margin-top: 20px;">
+            Segue no carro <?php echo $veiculo; ?> os paletes da nota <?php echo $nota; ?> , descriminados abaixo para posterior devolução:
         </div>
 
         <div class="row">
@@ -90,88 +90,97 @@ require_once 'db_connect.php';
                             <td class="center">P.B.R</td>
                         </tr>
                         <tr>
-                            <td class="center">XXXXX S</td>
-                            <td class="center">xxxxx P</td>
+                            <td class="center"><?php echo $simples; ?></td>
+                            <td class="center"><?php echo $pbr; ?></td>
                         </tr>
                         <tr>
-                            <td colspan="2"class="center">Total:XX</td>
+                            <td colspan="2" class="center">Total:<?php echo intval($simples) + intval($pbr) ; ?></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="col s2 center push-s5"><br><br><br><br><br><br><br>
                 ______________________________
-                 <br>
-            <div class="s12 center ">Assinatura</div>
+                <br>
+                <div class="s12 center ">Assinatura</div>
             </div>
         </div>
         <hr>
         <div class="row container">
-            <span class="right">Data:___/___/_______</span>
-            <span class="left">Resposta: _________________________________________      Ass:_____________________________</span>
+            <span class="right">Data:<?php echo ' ' . date('d/m/Y'); ?></span>
+            <span class="left">Resposta: _________________________________________ Ass:_____________________________</span>
         </div>
     </div>
+    <!------------------------------------------------------>
     <div class="row box">
+        <div class="row">
+            <div class="col s12">
+                <img class="responsive-img" src="img/printTop.jpeg" alt="">
+            </div>
+        </div>
+        <div class="row center" style="margin-bottom: -20px;">
+            <div class="col s10 push-s1">
+                <b> COMUNICAÇÂO INTERNA</b>
+            </div>
+            <div class="col s2 red-text">
+                <b>Nº: XXXXXXXX</b>
+            </div>
+        </div>
+        <div class="col s12 push-s1">
+            DE: <?php echo $origem; ?>
+        </div>
+        <div class="col s12 push-s1">
+            PARA: <?php echo $destino; ?>
+            <hr>
+        </div>
+        <div class="col s12 " style="margin-top: 20px;">
+            Segue no carro <?php echo $veiculo; ?> os paletes da nota <?php echo $nota; ?> , descriminados abaixo para posterior devolução:
+        </div>
 
-<div class="row">
-    <div class="col s12">
-        <img class="responsive-img" src="img/printTop.jpeg" alt="">
+        <div class="row">
+            <div class="col s3 push-s4">
+                <table class="no-autoinit">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="center">PALETES ENVIADOS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">SIMPLES</td>
+                            <td class="center">P.B.R</td>
+                        </tr>
+                        <tr>
+                            <td class="center"><?php echo $simples; ?></td>
+                            <td class="center"><?php echo $pbr; ?></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="center">Total:<?php echo intval($simples) + intval($pbr); ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col s2 center push-s5"><br><br><br><br><br><br><br>
+                ______________________________
+                <br>
+                <div class="s12 center ">Assinatura</div>
+            </div>
+        </div>
+        <hr>
+        <div class="row container">
+            <span class="right">Data:<?php echo ' ' . date('d/m/Y'); ?></span>
+            <span class="left">Resposta: _________________________________________ Ass:_____________________________</span>
+        </div>
     </div>
-</div>
-<div class="row center" style="margin-bottom: -20px;">
-    <div class="col s10 push-s1">
-        <b>  COMUNICAÇÂO INTERNA</b>
-    </div>
-    <div class="col s2 red-text">
-       <b>Nº: XXXXXXXX</b> 
-    </div>
-</div>
-<div class="col s12 push-s1">
-    DE: XXXX
-</div>
-<div class="col s12 push-s1">
-    PARA: XXXX
-    <hr>
-</div>
-<div class="col s12 push-s1" style="margin-top: 20px;">
-    Segue no carro XXXXXXX os paletes descriminados abaixo para posterior devolução:
-</div>
-
-<div class="row">
-    <div class="col s3 push-s4">
-        <table class="no-autoinit">
-            <thead>
-                <tr>
-                    <th colspan="2" class="center">PALETES ENVIADOS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="center">SIMPLES</td>
-                    <td class="center">P.B.R</td>
-                </tr>
-                <tr>
-                    <td class="center">XXXXX S</td>
-                    <td class="center">xxxxx P</td>
-                </tr>
-                <tr>
-                    <td colspan="2"class="center">Total:XX</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col s2 center push-s5"><br><br><br><br><br><br><br>
-        ______________________________
-         <br>
-    <div class="s12 center ">Assinatura</div>
-    </div>
-</div>
-<hr>
-<div class="row container">
-    <span class="right">Data:___/___/_______</span>
-    <span class="left">Resposta: _________________________________________      Ass:_____________________________</span>
-</div>
-</div>
+    <script>
+        function imprimir() {
+            window.print();
+            
+        }
+        window.addEventListener('afterprint', (event) => {
+            document.location.href = 'index.php';
+        });
+    </script>
 </body>
 
 </html>
