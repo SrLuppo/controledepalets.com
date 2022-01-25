@@ -38,7 +38,7 @@ require_once 'db_connect.php';
 
         @page {
             size: auto;
-            margin: 25px;
+            margin: 22px;
         }
 
         .box {
@@ -57,12 +57,12 @@ require_once 'db_connect.php';
                 <img class="responsive-img" src="img/printTop.jpeg" alt="">
             </div>
         </div>
-        <div class="row center">
-            <div class="col s10 push-s1">
+        <div class="row center"style="margin-bottom: -20px;">
+            <div class="col s10 push-s1" >
                 <b>  COMUNICAÇÂO INTERNA</b>
             </div>
-            <div class="col s2 text-red">
-                Nº: XXXXXXXX
+            <div class="col s2 red-text">
+               <b>Nº: XXXXXXXX</b> 
             </div>
         </div>
         <div class="col s12 push-s1">
@@ -72,12 +72,106 @@ require_once 'db_connect.php';
             PARA: XXXX
             <hr>
         </div>
-        <div class="col s12 push-s1" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="col s12 push-s1" style="margin-top: 20px;">
             Segue no carro XXXXXXX os paletes descriminados abaixo para posterior devolução:
         </div>
-        
-        
+
+        <div class="row">
+            <div class="col s3 push-s4">
+                <table class="no-autoinit">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="center">PALETES ENVIADOS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">SIMPLES</td>
+                            <td class="center">P.B.R</td>
+                        </tr>
+                        <tr>
+                            <td class="center">XXXXX S</td>
+                            <td class="center">xxxxx P</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"class="center">Total:XX</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col s2 center push-s5"><br><br><br><br><br><br><br>
+                ______________________________
+                 <br>
+            <div class="s12 center ">Assinatura</div>
+            </div>
+        </div>
+        <hr>
+        <div class="row container">
+            <span class="right">Data:___/___/_______</span>
+            <span class="left">Resposta: _________________________________________      Ass:_____________________________</span>
+        </div>
     </div>
+    <div class="row box">
+
+<div class="row">
+    <div class="col s12">
+        <img class="responsive-img" src="img/printTop.jpeg" alt="">
+    </div>
+</div>
+<div class="row center" style="margin-bottom: -20px;">
+    <div class="col s10 push-s1">
+        <b>  COMUNICAÇÂO INTERNA</b>
+    </div>
+    <div class="col s2 red-text">
+       <b>Nº: XXXXXXXX</b> 
+    </div>
+</div>
+<div class="col s12 push-s1">
+    DE: XXXX
+</div>
+<div class="col s12 push-s1">
+    PARA: XXXX
+    <hr>
+</div>
+<div class="col s12 push-s1" style="margin-top: 20px;">
+    Segue no carro XXXXXXX os paletes descriminados abaixo para posterior devolução:
+</div>
+
+<div class="row">
+    <div class="col s3 push-s4">
+        <table class="no-autoinit">
+            <thead>
+                <tr>
+                    <th colspan="2" class="center">PALETES ENVIADOS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">SIMPLES</td>
+                    <td class="center">P.B.R</td>
+                </tr>
+                <tr>
+                    <td class="center">XXXXX S</td>
+                    <td class="center">xxxxx P</td>
+                </tr>
+                <tr>
+                    <td colspan="2"class="center">Total:XX</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col s2 center push-s5"><br><br><br><br><br><br><br>
+        ______________________________
+         <br>
+    <div class="s12 center ">Assinatura</div>
+    </div>
+</div>
+<hr>
+<div class="row container">
+    <span class="right">Data:___/___/_______</span>
+    <span class="left">Resposta: _________________________________________      Ass:_____________________________</span>
+</div>
+</div>
 </body>
 
 </html>
