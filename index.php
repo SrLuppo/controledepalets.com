@@ -94,8 +94,9 @@ $result = $connect->query($sql);
         <thead>
           <tr>
               <th>Destino</th>
-              <th>Pallets PBR</th>
-              <th>Pallets Simples</th>
+              <th>PBR</th>
+              <th>Simples</th>
+              <th>Data</th>
           </tr>
         </thead>
 
@@ -108,6 +109,7 @@ $result = $connect->query($sql);
                 echo "<td>".$user_data['destino']."</td>";
                 echo "<td>".$user_data['pbr']."</td>";
                 echo "<td>".$user_data['simples']."</td>";
+                echo "<td>".$user_data['data']."</td>";
             }
          ?>
         </tbody>
