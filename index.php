@@ -4,7 +4,7 @@ require_once 'db_connect.php' ;
 
 include_once "includes/header.php";
 
-$sql = "SELECT * FROM registro ORDER BY id DESC LIMIT 10";
+$sql = "SELECT * FROM registro ORDER BY id DESC LIMIT 6";
 
 $result = $connect->query($sql);
 
