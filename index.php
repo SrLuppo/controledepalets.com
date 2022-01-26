@@ -4,6 +4,10 @@ require_once 'db_connect.php' ;
 
 include_once "includes/header.php";
 
+$sql = "SELECT * FROM registro ORDER BY id DESC LIMIT 10";
+
+$result = $connect->query($sql);
+
 ?>
 <div class="row">
 
@@ -86,10 +90,28 @@ include_once "includes/header.php";
 
     <!-- Débito de filiais -->
     <div class="col s12 m4 l4 teal lighten-5 index-box">
-    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
-    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
-    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
-    siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf  siduhfisudf 
+    <table>
+        <thead>
+          <tr>
+              <th>Destino</th>
+              <th>Pallets PBR</th>
+              <th>Pallets Simples</th>
+          </tr>
+        </thead>
+
+        <tbody>
+         <?php
+         
+            while($user_data = mysqli_fetch_assoc($result))
+            {
+                echo "<tr>";
+                echo "<td>".$user_data['destino']."</td>";
+                echo "<td>".$user_data['pbr']."</td>";
+                echo "<td>".$user_data['simples']."</td>";
+            }
+         ?>
+        </tbody>
+      </table>
     </div>
 
 </div>
