@@ -11,6 +11,21 @@ $nota = $_GET['nota'] ?? '';
 $data =  $_GET['data'] ?? '';
 
 
+if (!isset($_GET['id'])):
+
+    $sql = "SELECT * FROM registro ORDER BY id DESC LIMIT 1";
+
+    $result = mysqli_query($connect,$sql);
+    $id = mysqli_fetch_array($result)['id'];
+
+else:
+    $id = $_GET['id'];
+
+endif;
+
+
+
+
 
 ?>
 
@@ -62,7 +77,7 @@ $data =  $_GET['data'] ?? '';
                 <b> COMUNICAÇÂO INTERNA</b>
             </div>
             <div class="col s2 red-text">
-                <b>Nº: XXXXXXXX</b>
+                <b>Nº: <?php echo $id ?></b>
             </div>
         </div>
         <div class="col s12 push-s1">
@@ -107,7 +122,7 @@ $data =  $_GET['data'] ?? '';
         </div>
         <hr>
         <div class="row container">
-            <span class="right">Data:<?php echo ' ' . date('d/m/Y'); ?></span>
+            <span class="right">Data:<?php echo ' ' .date('d/m/Y', strtotime($data)); ?></span>
             <span class="left">Resposta: _________________________________________ Ass:_____________________________</span>
         </div>
     </div>
@@ -123,7 +138,7 @@ $data =  $_GET['data'] ?? '';
                 <b> COMUNICAÇÂO INTERNA</b>
             </div>
             <div class="col s2 red-text">
-                <b>Nº: XXXXXXXX</b>
+                <b>Nº: <?php echo $id ?></b>
             </div>
         </div>
         <div class="col s12 push-s1">
@@ -168,7 +183,7 @@ $data =  $_GET['data'] ?? '';
         </div>
         <hr>
         <div class="row container">
-            <span class="right">Data:<?php echo ' ' . date('d/m/Y'); ?></span>
+            <span class="right">Data:<?php echo ' ' .date('d/m/Y', strtotime($data)); ?></span>
             <span class="left">Resposta: _________________________________________ Ass:_____________________________</span>
         </div>
     </div>

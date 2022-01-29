@@ -6,7 +6,8 @@ include_once "includes/header.php";
 
 $sql = "SELECT * FROM registro ORDER BY id DESC LIMIT 6";
 
-$result = $connect->query($sql);
+
+$result = mysqli_query($connect,$sql);
 
 ?>
 <div class="row">
@@ -103,14 +104,28 @@ $result = $connect->query($sql);
         <tbody>
          <?php
          
-            while($user_data = mysqli_fetch_assoc($result))
+            while($listaRegistro = mysqli_fetch_assoc($result))
             {
+                $data = date('H:i d/m/Y', strtotime($listaRegistro['data']));
+                $dataToSend = $listaRegistro['data'];
+                $destino = $listaRegistro['destino'];
+                $pbr = $listaRegistro['pbr'];
+                $simples = $listaRegistro['simples'];
+                $veiculo = $listaRegistro['veiculo'];
+                $origem = $listaRegistro['origem'];
+                $nota = $listaRegistro['notafiscal'];
+                $id = $listaRegistro['id'];
+
+
                 echo "<tr>";
-                echo "<td>".$user_data['destino']."</td>";
-                echo "<td>".$user_data['pbr']."</td>";
-                echo "<td>".$user_data['simples']."</td>";
-                echo "<td>".$user_data['data']."</td>";
+                echo "<td>".$destino."</td>";
+                echo "<td>".$pbr."</td>";
+                echo "<td>".$simples."</td>";
+                echo "<td>".$data."</td>";
+                echo "<td> <a class='btn-float' href='impressao.php?origem=$origem&destino=$destino&pbr=$pbr&simples=$simples&veiculo=$veiculo&nota=$nota&data=$dataToSend&id=$id'> <i class='material-icons teal-text text-lighten-1' >print</i></a> </td>";
+                echo "</tr>";
             }
+            
          ?>
         </tbody>
       </table>
