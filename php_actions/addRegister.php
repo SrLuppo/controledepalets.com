@@ -40,9 +40,9 @@ $data = date('Y-m-d H:i:s');
         mysqli_query($connect,$sqlUpdate );
 
     else:
-        $sqlInsertNewLine = "INSERT INTO debitos (filial, enviado_pbr, enviado_simples) 
+        $sqlInsertNewLine = "INSERT INTO debitos (filial, enviado_pbr, enviado_simples, devolveu_pbr, devolveu_simples) 
                             VALUES
-                            ('$destino','$pbr','$simples')";
+                            ('$destino','$pbr','$simples' , 0 , 0 )";
                         
         mysqli_query($connect,$sqlInsertNewLine );
 

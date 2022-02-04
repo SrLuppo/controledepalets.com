@@ -86,11 +86,67 @@ $result = mysqli_query($connect,$sql);
 
     <!-- Débito de filiais -->
     <div class="col s12 m4 l4 teal lighten-5 index-box">
+        <div class="row">
+            <div class="col s12 center">
+                <h5>Débitos</h5>
+            </div>
+
+        </div>
+    <table class="centered">
+        <thead>
+          <tr>                                    
+              <th>Filial</th>                       
+              <th>PBR</th>                       
+              <th>Simples</th>                       
+              <th>Reg.Devolução</th>                       
+          </tr>          
+        </thead>
+
+        <tbody>
+         <?php
+
+         $sqlDebito = "SELECT * FROM debitos WHERE (enviado_pbr - devolveu_pbr) > 0 or (enviado_simples - devolveu_simples) > 0";
+
+         $debitoQuerry = mysqli_query($connect,$sqlDebito);
+         
+
+         while($debitoDados = mysqli_fetch_array($debitoQuerry)) {
+
+             $debitoPbr = $debitoDados['enviado_pbr'] - $debitoDados['devolveu_pbr'] ;
+             $debitoSimples = $debitoDados['enviado_simples'] - $debitoDados['devolveu_simples'] ;
+            ?>
+           <tr>
+               <td><?php echo $debitoDados['filial']; ?></td>
+               <td><?php echo $debitoPbr; ?></td>
+               <td><?php echo $debitoSimples; ?></td>
+               <td><a class="btn-floating" href=""><i class="material-icons">undo</i></a></td>
+           </tr>
+            <?php
+         }
+         
+          
+            
+         ?>
+        </tbody>
+      </table>
+
+
+
+
+
+
+
     
     </div>
 
     <!-- Débito de filiais -->
     <div class="col s12 m4 l4 teal lighten-5 index-box">
+    <div class="row">
+            <div class="col s12 center">
+                <h5>Últimos Registros</h5>
+            </div>
+
+        </div>
     <table>
         <thead>
           <tr>
