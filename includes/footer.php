@@ -11,6 +11,19 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
+    <?php
+    
+        if(isset($_SESSION['menssagem'])){
+        ?>
+            M.toast({html: '<?php echo $_SESSION['menssagem']?>'})
+        <?php };
+            session_unset();
+        ?>
+    //abertura do modal materialize
+    $(document).ready(function(){
+        $('.modal').modal();
+    });
+
     //maiusculas 
     document.getElementById('destino').addEventListener('keyup', (ev) => {
         const input = ev.target;
@@ -21,6 +34,7 @@
         const input = ev.target;
         input.value = input.value.toUpperCase();
     });
+
 </script>
 </body>
 

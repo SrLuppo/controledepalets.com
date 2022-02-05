@@ -119,8 +119,41 @@ $result = mysqli_query($connect,$sql);
                <td><?php echo $debitoDados['filial']; ?></td>
                <td><?php echo $debitoPbr; ?></td>
                <td><?php echo $debitoSimples; ?></td>
-               <td><a class="btn-floating" href=""><i class="material-icons">undo</i></a></td>
+               <td><a class="btn-floating modal-trigger" href="#modal<?php echo $debitoDados['id']; ?>"><i class="material-icons">undo</i></a></td>
            </tr>
+
+            <!-- Modal Structure -->
+            <div id="modal<?php echo $debitoDados['id']; ?>" class="modal">
+                <div class="modal-content center">
+                    <h4>Registrar Devolução de <?php echo $debitoDados['filial']; ?> </h4>
+
+                    <form action="php_actions/regDevolucao.php" method="POST">
+                        <div class="row">
+                            <div class="input-field col s2 push-s4">
+                                <i class="material-icons prefix">calendar_view_month</i>
+                                <input type="number" placeholder="PBR" id="pbrDevolucao" name="pbrDevolucao" class="autocomplete">
+                            </div>  
+
+                            <input type="hidden" name="id" value="<?php echo $debitoDados['id']; ?>">
+
+                            <div class="input-field col s2 push-s4">
+                                <i class="material-icons prefix">calendar_view_month</i>
+                                <input type="number" placeholder="Simples" id="simplesDevolucao" name="simplesDevolucao" class="autocomplete">
+                            </div>
+
+                            <div class="col s12 center">
+                                <a href="#!" class="modal-close waves-effect red btn text-white ">Cancelar</a>
+                                <button class="btn green waves-effect waves-light" type="submit" name="action">Registrar
+                                    <i class="material-icons right">send</i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
             <?php
          }
          
@@ -129,14 +162,6 @@ $result = mysqli_query($connect,$sql);
          ?>
         </tbody>
       </table>
-
-
-
-
-
-
-
-    
     </div>
 
     <!-- Débito de filiais -->
@@ -188,6 +213,9 @@ $result = mysqli_query($connect,$sql);
     </div>
 
 </div>
+<script>
+
+</script>
 <?php
 include_once "includes/footer.php";
 ?>
