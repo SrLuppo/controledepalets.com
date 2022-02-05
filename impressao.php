@@ -2,6 +2,9 @@
 session_start();
 require_once 'db_connect.php';
 
+
+date_default_timezone_set('America/Sao_Paulo');
+
 $origem =  $_GET['origem'] ?? '';
 $destino =  $_GET['destino'] ?? '';
 $pbr =  $_GET['pbr'] ?? 0 ;
