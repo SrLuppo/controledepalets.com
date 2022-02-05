@@ -15,7 +15,7 @@ function clear($input) {
 }
 
 
-date_default_timezone_set('America/Sao_Paulo');
+date_default_timezone_set('America/Recife');
 
 echo $_POST['pbrDevolucao'] .' <br>';
 echo $_POST['simplesDevolucao'] .' <br>';

@@ -4,7 +4,7 @@ require_once 'db_connect.php' ;
 
 include_once "includes/header.php";
 
-date_default_timezone_set('America/Sao_Paulo');
+date_default_timezone_set('America/Recife');
 $sql = "SELECT * FROM registro ORDER BY id DESC LIMIT 6";
 
 

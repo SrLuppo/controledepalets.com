@@ -13,7 +13,7 @@ function clear($input) {
     return $var;
 
 }
-date_default_timezone_set('America/Sao_Paulo');
+date_default_timezone_set('America/Recife');
 
 $origem = clear($_POST['origem']) ; 
 $destino = clear($_POST['destino']) ; 

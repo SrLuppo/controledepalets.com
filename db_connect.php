@@ -1,6 +1,6 @@
 <?php
 ob_start();
-date_default_timezone_set('America/Sao_Paulo');
+date_default_timezone_set('America/Recife');
 // conexão com banco de dados
 $servername = "localhost";
 $username = "root";
