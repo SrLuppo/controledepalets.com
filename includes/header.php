@@ -37,8 +37,6 @@ ob_start();
     </style>
 </head>
 <body class="teal lighten-4">
-
-?>">
 <header>
   <div class="row">
     <div class="col s12 center teal darken-3">
