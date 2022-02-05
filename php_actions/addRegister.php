@@ -13,7 +13,7 @@ function clear($input) {
     return $var;
 
 }
-
+date_default_timezone_set('America/Sao_Paulo');
 
 $origem = clear($_POST['origem']) ; 
 $destino = clear($_POST['destino']) ; 
@@ -28,8 +28,8 @@ $data = date('Y-m-d H:i:s');
     $query = mysqli_query($connect,$sqlConsultaExists);
     $exist =  mysqli_num_rows( $query ) ;
 
-    date_default_timezone_set('America/Sao_Paulo');
-    
+
+
     if( (bool) $exist ):
 
         $totais = mysqli_fetch_array( $query );

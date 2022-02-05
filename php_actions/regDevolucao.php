@@ -14,6 +14,9 @@ function clear($input) {
 
 }
 
+
+date_default_timezone_set('America/Sao_Paulo');
+
 echo $_POST['pbrDevolucao'] .' <br>';
 echo $_POST['simplesDevolucao'] .' <br>';
 echo $_POST['id'] .' <br>';
@@ -22,7 +25,6 @@ $devPbr = $_POST['pbrDevolucao'] ?   clear($_POST['pbrDevolucao']) : 0;
 $devSimples = $_POST['simplesDevolucao']?  clear($_POST['simplesDevolucao']) : 0;
 $id =  $_POST['id'];
 
-date_default_timezone_set('America/Sao_Paulo');
 
 $sqlConsultaExists = "SELECT * FROM debitos where id = '$id ' ";
 $query = mysqli_query($connect,$sqlConsultaExists);
