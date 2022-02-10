@@ -19,7 +19,7 @@ $result = mysqli_query($connect,$sql);
 
             <!-- Titulo -->
             <div class="col s12 center">
-                <h5>Registrar clientes</h5>
+                <h5>Registrar Envio de Pallets</h5>
                 <hr>
             </div>
 
@@ -30,15 +30,20 @@ $result = mysqli_query($connect,$sql);
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">home</i>
-                        <input type="text" id="destino" name="cliente" id="cleinte" name="cliente" maxlength="" class="autocomplete">
-                        <label for="origem">Cliente</label>
+                        <input readonly type="text" value="CWB" id="origem" name="origem" maxlength="3" class="autocomplete">
+                        <label for="origem">Origem</label>
                     </div>
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">moving</i>
                         <input type="text" id="destino" name="destino" maxlength="3" required class="autocomplete">
                         <label for="destino">Destino</label>
-                    </div>                
+                    </div>
+
+                    <!-- Pallets -->
+                    <div class="input-field col s12">
+                        <h5>Pallets</h5>
+                    </div>
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">calendar_view_month</i>
@@ -50,7 +55,12 @@ $result = mysqli_query($connect,$sql);
                         <i class="material-icons prefix">calendar_view_month</i>
                         <input type="number" id="simples" name="simples" class="autocomplete">
                         <label for="simples">Simples</label>
-                    </div>                    
+                    </div>
+
+                    <!-- Nota Fiscal e Placa do veículo -->
+                    <div class="input-field col s12">
+                        <h5>Nota Fiscal e Veículo</h5>
+                    </div>
                     <div class="input-field col s5">
                         <i class="material-icons prefix">local_shipping</i>
                         <input type="text" id="placa" name="placa" maxlength="7" required class="autocomplete">

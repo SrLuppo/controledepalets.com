@@ -5,7 +5,7 @@ date_default_timezone_set('America/Recife');
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db_name ="adlsclientes";
+$db_name ="controlepallets";
 
 $connect = mysqli_connect($servername,$username,$password,$db_name);
 mysqli_set_charset($connect,"utf8");
