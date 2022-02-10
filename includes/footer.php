@@ -25,7 +25,7 @@
     });
 
     //maiusculas 
-    document.getElementById('destino').addEventListener('keyup', (ev) => {
+    /*document.getElementById('destino').addEventListener('keyup', (ev) => {
         const input = ev.target;
         input.value = input.value.toUpperCase();
     });
@@ -34,6 +34,7 @@
         const input = ev.target;
         input.value = input.value.toUpperCase();
     });
+    */
 
 </script>
 </body>
