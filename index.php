@@ -117,7 +117,7 @@ $result = mysqli_query($connect,$sql);
              $debitoSimples = $debitoDados['enviado_simples'] - $debitoDados['devolveu_simples'] ;
             ?>
            <tr>
-               <td><?php echo $debitoDados['filial']; ?></td>
+               <td><a href="relatorio.php?filial=<?php echo $debitoDados['filial'];?>"><?php echo $debitoDados['filial'];?></a></td>
                <td><?php echo $debitoPbr; ?></td>
                <td><?php echo $debitoSimples; ?></td>
                <td><a class="btn-floating modal-trigger" href="#modal<?php echo $debitoDados['id']; ?>"><i class="material-icons">undo</i></a></td>
