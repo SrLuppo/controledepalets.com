@@ -29,6 +29,7 @@ $result = mysqli_query($connect,$sql);
               <th>Numero da CI</th>
               <th>Numero da NF</th>
               <th>Destino</th>
+              <th>Veículo</th>
               <th>PBR</th>
               <th>Simples</th>
               <th>Data</th>
@@ -57,6 +58,7 @@ $result = mysqli_query($connect,$sql);
                 echo "<td>".$numeroDaCi."</td>";
                 echo "<td>".$notafiscal."</td>";
                 echo "<td>".$destino."</td>";
+                echo "<td>".$veiculo."</td>";
                 echo "<td>".$pbr."</td>";
                 echo "<td>".$simples."</td>";
                 echo "<td>".$data."</td>";
