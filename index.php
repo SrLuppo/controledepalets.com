@@ -14,7 +14,7 @@ $result = mysqli_query($connect,$sql);
 <div class="row">
 
     <!-- ENVIO DE PALLETS -->
-    <div class="col s12 m4 l4 teal lighten-5 index-box">
+    <div class="col s12 m4 l4 blue lighten-5 index-box">
         <div class="row">
 
             <!-- Titulo -->
@@ -30,13 +30,13 @@ $result = mysqli_query($connect,$sql);
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">home</i>
-                        <input readonly type="text" value="CWB" id="origem" name="origem" maxlength="3" class="autocomplete">
+                        <input readonly type="text" value="CAS" id="origem" name="origem" maxlength="3" class="autocomplete">
                         <label for="origem">Origem</label>
                     </div>
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">moving</i>
-                        <input type="text" id="destino" name="destino" maxlength="3" required class="autocomplete">
+                        <input type="text" id="destino" name="destino" maxlength="3" requiblue class="autocomplete">
                         <label for="destino">Destino</label>
                     </div>
 
@@ -63,7 +63,7 @@ $result = mysqli_query($connect,$sql);
                     </div>
                     <div class="input-field col s5">
                         <i class="material-icons prefix">local_shipping</i>
-                        <input type="text" id="placa" name="placa" maxlength="7" required class="autocomplete">
+                        <input type="text" id="placa" name="placa" maxlength="7" requiblue class="autocomplete">
                         <label for="placa">Veículo</label>
                     </div>
 
@@ -75,7 +75,7 @@ $result = mysqli_query($connect,$sql);
 
 
                     <div class="col s12">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Imprimir e Registrar
+                        <button class="btn blue waves-effect waves-light" type="submit" name="action">Imprimir e Registrar
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
@@ -86,14 +86,14 @@ $result = mysqli_query($connect,$sql);
     </div>
 
     <!-- Débito de filiais -->
-    <div class="col s12 m4 l4 teal lighten-5 index-box">
+    <div class="col s12 m4 l4 blue lighten-5 index-box">
         <div class="row">
             <div class="col s12 center">
                 <h5>Débitos</h5>
             </div>
 
         </div>
-    <table class="centered">
+    <table class="centeblue">
         <thead>
           <tr>                                    
               <th>Filial</th>                       
@@ -120,7 +120,7 @@ $result = mysqli_query($connect,$sql);
                <td><a href="relatorio.php?filial=<?php echo $debitoDados['filial'];?>"><?php echo $debitoDados['filial'];?></a></td>
                <td><?php echo $debitoPbr; ?></td>
                <td><?php echo $debitoSimples; ?></td>
-               <td><a class="btn-floating modal-trigger" href="#modal<?php echo $debitoDados['id']; ?>"><i class="material-icons">undo</i></a></td>
+               <td><a class="btn-floating blue modal-trigger" href="#modal<?php echo $debitoDados['id']; ?>"><i class="material-icons">undo</i></a></td>
            </tr>
 
             <!-- Modal Structure -->
@@ -143,8 +143,8 @@ $result = mysqli_query($connect,$sql);
                             </div>
 
                             <div class="col s12 center">
-                                <a href="#!" class="modal-close waves-effect red btn text-white ">Cancelar</a>
-                                <button class="btn green waves-effect waves-light" type="submit" name="action">Registrar
+                                <a href="#!" class="modal-close waves-effect blue btn text-white ">Cancelar</a>
+                                <button class="btn blue waves-effect waves-light" type="submit" name="action">Registrar
                                     <i class="material-icons right">send</i>
                                 </button>
 
@@ -166,7 +166,7 @@ $result = mysqli_query($connect,$sql);
     </div>
 
     <!-- Débito de filiais -->
-    <div class="col s12 m4 l4 teal lighten-5 index-box">
+    <div class="col s12 m4 l4 blue lighten-5 index-box">
     <div class="row">
             <div class="col s12 center">
                 <h5>Últimos Registros</h5>
@@ -204,7 +204,7 @@ $result = mysqli_query($connect,$sql);
                 echo "<td>".$pbr."</td>";
                 echo "<td>".$simples."</td>";
                 echo "<td>".$data."</td>";
-                echo "<td> <a class='btn-float' href='impressao.php?origem=$origem&destino=$destino&pbr=$pbr&simples=$simples&veiculo=$veiculo&nota=$nota&data=$dataToSend&id=$id'> <i class='material-icons teal-text text-lighten-1' >print</i></a> </td>";
+                echo "<td> <a class='btn-float' href='impressao.php?origem=$origem&destino=$destino&pbr=$pbr&simples=$simples&veiculo=$veiculo&nota=$nota&data=$dataToSend&id=$id'> <i class='material-icons blue-text text-lighten-1' >print</i></a> </td>";
                 echo "</tr>";
             }
             

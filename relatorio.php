@@ -16,7 +16,7 @@ $result = mysqli_query($connect,$sql);
 <div class="row">
 
     <!-- Débito de filiais -->
-    <div class="col s12 m12 l12 teal lighten-5 index-box">
+    <div class="col s12 m12 l12 blue lighten-5 index-box">
     <div class="row">
             <div class="col s12 center">
                 <h5> Registros de <?php echo $filial; ?> </h5>
@@ -62,7 +62,7 @@ $result = mysqli_query($connect,$sql);
                 echo "<td>".$pbr."</td>";
                 echo "<td>".$simples."</td>";
                 echo "<td>".$data."</td>";
-                echo "<td> <a class='btn-float' href='impressao.php?origem=$origem&destino=$destino&pbr=$pbr&simples=$simples&veiculo=$veiculo&nota=$nota&data=$dataToSend&id=$id'> <i class='material-icons teal-text text-lighten-1' >print</i></a> </td>";
+                echo "<td> <a class='btn-float' href='impressao.php?origem=$origem&destino=$destino&pbr=$pbr&simples=$simples&veiculo=$veiculo&nota=$nota&data=$dataToSend&id=$id'> <i class='material-icons blue-text text-lighten-1' >print</i></a> </td>";
                 echo "</tr>";
             }
             

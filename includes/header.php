@@ -30,17 +30,17 @@ ob_start();
         }
 
         .index-box {
-            border: #b2dfdb;
+            border: #1565C0;
             border-style: solid;
             border-width: 10px;
         }
     </style>
 </head>
-<body class="teal lighten-4">
+<body class="blue lighten-4">
 <header>
   <div class="row">
-    <div class="col s12 center teal darken-3">
-        <h4 class="teal-text text-lighten-5" >Controle de Pallets CWB</h4>
+    <div class="col s12 center blue darken-3">
+        <h4 class="blue-text text-lighten-5" >Controle de Pallets CAS</h4>
     </div>
 </div>  
 </header>

@@ -79,7 +79,7 @@ endif;
             <div class="col s10 push-s1">
                 <b> COMUNICAÇÂO INTERNA</b>
             </div>
-            <div class="col s2 red-text">
+            <div class="col s2 blue-text">
                 <b>Nº: <?php echo $id ?></b>
             </div>
         </div>
@@ -140,7 +140,7 @@ endif;
             <div class="col s10 push-s1">
                 <b> COMUNICAÇÂO INTERNA</b>
             </div>
-            <div class="col s2 red-text">
+            <div class="col s2 blue-text">
                 <b>Nº: <?php echo $id ?></b>
             </div>
         </div>

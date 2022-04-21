@@ -1,7 +1,7 @@
 </main>
 
-<footer class="page-footer teal darken-3">
-    <div class="footer-copyright teal darken-3">
+<footer class="page-footer blue darken-3">
+    <div class="footer-copyright blue darken-3">
         <div class="container">
             © 2022 ADLS-Development
             <a class="grey-text text-lighten-4 right" href="#!">Links</a>
