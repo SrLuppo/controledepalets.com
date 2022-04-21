@@ -36,7 +36,7 @@ $result = mysqli_query($connect,$sql);
 
                     <div class="input-field col s5">
                         <i class="material-icons prefix">moving</i>
-                        <input type="text" id="destino" name="destino" maxlength="3" requiblue class="autocomplete">
+                        <input type="text" id="destino" name="destino" maxlength="3" required class="autocomplete">
                         <label for="destino">Destino</label>
                     </div>
 
@@ -63,7 +63,7 @@ $result = mysqli_query($connect,$sql);
                     </div>
                     <div class="input-field col s5">
                         <i class="material-icons prefix">local_shipping</i>
-                        <input type="text" id="placa" name="placa" maxlength="7" requiblue class="autocomplete">
+                        <input type="text" id="placa" name="placa" maxlength="7" required class="autocomplete">
                         <label for="placa">Veículo</label>
                     </div>
 
